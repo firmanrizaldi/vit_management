@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+
+        <record id="view_capacity_tree" model="ir.ui.view">
+            <field name="name">view_capacity_tree</field>
+            <field name="model">management.capacity</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="capacity">
+                    <field name="rack"/>
+                    <field name="used"/>
+                    <field name="available"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_capacity_form" model="ir.ui.view">
+            <field name="name">view_capacity_form</field>
+            <field name="model">management.capacity</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="capacity Form">
+                    <sheet>
+                        <group>
+                            <field name="rack"/>
+                            <field name="used"/>
+                            <field name="available"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

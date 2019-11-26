@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+
+        <record id="view_merek_tree" model="ir.ui.view">
+            <field name="name">merek tree</field>
+            <field name="model">management.merek</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="merek tree">
+                    <field name="merk"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_management_merek_form" model="ir.ui.view">
+            <field name="name">merek form</field>
+            <field name="model">management.merek</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="merek Form">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="merk" class="oe_edit_only"
+                                        string="Merk"/>
+                            <h1>
+                                <field name="merk"/>
+                            </h1>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

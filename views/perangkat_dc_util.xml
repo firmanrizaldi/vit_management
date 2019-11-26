@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+
+        <record id="view_utilasi_perangkat_tree" model="ir.ui.view">
+            <field name="name">Perangkat_DC_Utilasi_tree</field>
+            <field name="model">management.perangkatutilasi</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Perangkat DC">
+                    <field name="OS"/>
+                    <field name="cpu"/>
+                    <field name="ram"/>
+                    <field name="disk"/>
+                    <field name="traffic"/>
+                    <field name="fungsi"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_management_utilasi_perangkat_form" model="ir.ui.view">
+            <field name="name">Perangkat_DC_Utilasi_form</field>
+            <field name="model">management.perangkatutilasi</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Perangkat DC Form">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="OS" class="oe_edit_only"
+                                        string="OS"/>
+                            <h1>
+                                <field name="OS"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="cpu"/>
+                            <field name="ram"/>
+                            <field name="disk"/>
+                            <field name="traffic"/>
+                        </group>
+                        <notebook>
+                            <page string="fungsi">
+                                <field name="fungsi"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

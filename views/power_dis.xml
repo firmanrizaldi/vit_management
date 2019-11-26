@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+
+        <record id="view_power_tree" model="ir.ui.view">
+            <field name="name">Power_Distribusi_View_Tree</field>
+            <field name="model">management.power</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Power Distribution Tree">
+                    <field name="ruang_id"/>
+                    <field name="capacity_id"/>
+                    <field name="no_reg"/>
+                    <field name="merek_id"/>
+                    <field name="fungsi"/>
+                    <field name="koneksi_listrik"/>
+                    <field name="distribusi"/>
+                    <field name="visit"/>
+                    <field name="note"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_power_form" model="ir.ui.view">
+            <field name="name">Power_Distribusi_View_Form</field>
+            <field name="model">management.power</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Power Distribution Form">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="ruang_id" class="oe_edit_only"
+                                        string="Ruang"/>
+                            <h1>
+                                <field name="ruang_id"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="capacity_id"/>
+                            <field name="no_reg"/>
+                            <field name="merek_id"/>
+                            <field name="fungsi"/>
+                            <field name="koneksi_listrik"/>
+                            <field name="distribusi"/>
+                            <field name="visit"/>
+                        </group>
+                        <notebook>
+                            <page string="Note">
+                                <field name="note"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

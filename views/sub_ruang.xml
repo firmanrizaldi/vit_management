@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+
+        <record id="view_sub_ruang_tree" model="ir.ui.view">
+            <field name="name">sub_ruang tree</field>
+            <field name="model">management.sub_ruang</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="sub_ruang tree">
+                    <field name="ruang_id"/>
+                    <field name="no_sub_ruang"/>
+                    <field name="nama_sub_ruang"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_management_sub_ruang_form" model="ir.ui.view">
+            <field name="name">sub_ruang form</field>
+            <field name="model">management.sub_ruang</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="sub_ruang Form">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="ruaruang_idng" class="oe_edit_only"
+                                        string="Ruang"/>
+                            <h1>
+                                <field name="ruang_id"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="no_sub_ruang"/>
+                            <field name="nama_sub_ruang"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

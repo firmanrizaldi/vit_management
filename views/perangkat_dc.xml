@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+
+        <record id="view_perangkat_tree" model="ir.ui.view">
+            <field name="name">Perangkat DC tree</field>
+            <field name="model">management.perangkat</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Perangkat DC">
+                    <field name="no_reg"/>
+                    <field name="pemilik"/>
+                    <field name="ruang_id"/>
+                    <field name="merek_id"/>
+                    <field name="spesifikasi"/>
+                    <field name="fungsi"/>
+                    <field name="visit"/>
+                    <field name="note"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_management_perangkat_form" model="ir.ui.view">
+            <field name="name">Perangkat DC form</field>
+            <field name="model">management.perangkat</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Perangkat DC Form">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="no_reg" class="oe_edit_only"
+                                        string="No Reg"/>
+                            <h1>
+                                <field name="no_reg"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="ruang_id"/>
+                            <field name="pemilik"/>
+                            <field name="merek_id"/>
+                            <field name="spesifikasi"/>
+                            <field name="fungsi"/>
+                            <field name="visit"/>
+                        </group>
+                        <notebook>
+                            <page string="Note">
+                                <field name="note"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>
